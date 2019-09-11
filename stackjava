@@ -1,0 +1,42 @@
+import java.util.Scanner;
+class Main
+{
+    static int r;
+    int arr[];
+    public Main(int n)
+    {
+        r=-1;
+        arr=new int[n];
+    }
+	
+	void push(int a)
+	{
+	    if (r==arr.length-1)
+	     System.out.println("Stack overflow");
+	    else
+	    {
+	     System.out.println(a+"added at location");
+	     arr[++r]=a;
+	    }
+	}
+	public static void main(String[] args) {
+	    Scanner s =new Scanner(System.in);
+	    System.out.println("Enter array length : ");
+	    int l=s.nextInt();
+		Main obj=new Main(l);
+		for(int i=0;i<=l;i++)
+		{
+		  System.out.println("Enter value to push - ");
+		  int k=s.nextInt();
+		  obj.push(k);
+		}
+		obj.pop();
+	}
+	void pop()
+	{
+	    if(r==-1)
+	      System.out.println("Empty Stack");
+	    else
+	      System.out.println(arr[r]);
+	}
+}

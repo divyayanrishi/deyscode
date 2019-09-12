@@ -1,0 +1,7 @@
+StringBuffer s=new StringBuffer();
+s.append();
+s.delete(start,end);
+s.replace(start,end,text);
+s.insert(offset,text);
+s.reverse();
+s.capacity();
